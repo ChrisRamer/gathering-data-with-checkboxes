@@ -4,8 +4,12 @@ $(document).ready(function () {
 		$("#output").show();
 		$("input:checkbox[name=work-transportation]:checked").each(function () {
 			const workTransportationMode = $(this).val();
-			$("#output").append(workTransportationMode + "<br>");
+			$("#output #work-responses").append(workTransportationMode + "<br>");
 		});
-		$('#transportation_survey').hide();
+		$("input:checkbox[name=fun-transportation]:checked").each(function () {
+			const funTransportationMode = $(this).val();
+			$("#output #fun-responses").append(funTransportationMode + "<br>");
+		});
+		$("#transportation_survey").hide();
 	});
 });
